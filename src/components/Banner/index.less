@@ -1,0 +1,35 @@
+.banner {
+  position: relative;
+  overflow: hidden;
+  img {
+    width : 100vw;
+    height: 600px;
+  }
+
+  .banner-box {
+    &::before {
+      position           : absolute;
+      left               : 0;
+      bottom             : 20px;
+      content            : "";
+      width              : 200%;
+      height             : 100%;
+      display            : block;
+      background-image   : url(../../images/wave-light.png);
+      background-repeat  : repeat-x;
+      background-position: left bottom;
+      background-size    : 50% auto;
+      animation          : move 10s linear infinite;
+    }
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate3d(0, 0, 0)
+  }
+
+  100% {
+    transform: translate3d(-50%, 0, 0)
+  }
+}
