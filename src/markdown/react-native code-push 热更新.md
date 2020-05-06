@@ -21,7 +21,8 @@ code-push register
 code-push app add rebooking-ios ios react-native
 ```
 得到下面的两个 `key` ， 后面会用到
-![屏幕快照 2019-04-24 上午10.09.27.png](https://user-gold-cdn.xitu.io/2020/4/25/171b117a8ab2e189?w=996&h=206&f=png&s=130592)
+
+![ios](react-native code-push 热更新/171b117a8ab2e189.png)
 
 
 #### 4. 添加 android 平台应用
@@ -32,7 +33,8 @@ code-push app add rebooking-android android react-native
 
 
 进入 [https://appcenter.ms/](https://appcenter.ms/) 可以看到你刚才创建的app， 如下图
-![屏幕快照 2019-04-24 上午10.15.11.png](https://user-gold-cdn.xitu.io/2020/4/25/171b117a8a9833cd?w=1240&h=342&f=png&s=49055)
+
+![appcenter](react-native code-push 热更新/171b117a8a9833cd.png)
 
 ---
 ##### 下面开始整合到 react-native
@@ -53,8 +55,9 @@ Package name not found in ...`等， 请使用新版本的`react-native` 版本`
 这个时候将你`Android` 中 `Production` 的 `Deployment Key` 粘贴回程。 `ios` 同理。
 
 #### 7. 将 Android 和 ios 的版本号改为 1.0.0
-![Android 版本号修改.png](https://user-gold-cdn.xitu.io/2020/4/25/171b117a8db7c7be?w=941&h=306&f=png&s=68350)
-![IOS 版本号修改.png.png](https://user-gold-cdn.xitu.io/2020/4/25/171b117a8b7d22ba?w=968&h=199&f=png&s=91188)
+![Android 版本号修改.png](react-native code-push 热更新/171b117a8db7c7be.png)
+
+![IOS 版本号修改.png](react-native code-push 热更新/IOS 版本号修改.png)
 
 #### 8. 在 react-native 项目中的首页中 使用 code-push
 ```
@@ -126,9 +129,9 @@ code-push release-react rebooking-ios ios -d Production
 code-push release-react rebooking-android android -d Production
 ```
 最后打开手机查看效果
-![屏幕快照 2019-04-24 上午10.42.10.png](https://user-gold-cdn.xitu.io/2020/4/25/171b117a8f46caf2?w=1240&h=403&f=png&s=88610)
+![result.png](react-native code-push 热更新/result.png)
 
 
 > 关于自定义更新弹框 ，参照下面的文章
 
-![image.png](https://user-gold-cdn.xitu.io/2020/4/25/171b117a8da8f1b4?w=930&h=1458&f=png&s=191751)
+![image.png](react-native code-push 热更新/image.png)

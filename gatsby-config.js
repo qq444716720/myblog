@@ -4,6 +4,7 @@ module.exports = {
     description: ``,
     author: `444716720@qq.com`,
   },
+  pathPrefix: `/myblog`,
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
@@ -28,6 +29,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/src/markdown/`,
+      },
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
@@ -44,14 +52,9 @@ module.exports = {
               lineNumbers: true,
             }
           },
+          `gatsby-remark-images`,
+          `gatsby-remark-copy-linked-files`,
         ],
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `content`,
-        path: `${__dirname}/src/markdown/`,
       },
     },
     {
@@ -69,7 +72,7 @@ module.exports = {
         },
         javascriptEnabled: true
       }
-    },
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

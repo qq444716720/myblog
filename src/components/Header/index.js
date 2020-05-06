@@ -52,7 +52,10 @@ const Header = ({ siteTitle, isHome }) => {
     }, { passive: true });
   }, [])
 
-  const pathname = window.location.pathname || '';
+  let pathname = '';
+  if (typeof window !== 'undefined') {
+    pathname = window.location.pathname || ''
+  }
   return (
     <header className='header' style={isHome ? {} : {
       background: '#0e0e0e61',

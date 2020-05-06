@@ -9,8 +9,8 @@ import SEO from "../components/seo"
 import './index.less'
 
 const tips = [
-	"什么都无法舍弃的人，<br />什么都无法改变。",
 	"“但是”之前的话都是废话。",
+	"什么都无法舍弃的人，<br />什么都无法改变。",
 	"一切都将逝去，唯有死神永生。",
 	"世上无难事，只要肯放弃。",
 	"永远相信美好的事情即将发生",
@@ -23,8 +23,8 @@ const tips = [
 
 const IndexPage = () => {
 	useEffect(() => {
-		const index = Math.floor(Math.random() * 5)
-		const json = require(`../static/${index}.json`)
+		const jsonIndex = Math.floor(Math.random() * 5)
+		const json = require(`../static/${jsonIndex}.json`)
 		lottie.loadAnimation({
 			container: document.getElementById("box"),
 			renderer: 'svg',
@@ -33,14 +33,14 @@ const IndexPage = () => {
 			animationData: json
 		})
 	}, [])
-	const index = Math.floor(Math.random() * tips.length);
+	const tipsIndex = Math.floor(Math.random() * tips.length);
 	return (
 		<Layout isHome>
 			<SEO title="首页" />
 			<div className='banner-wrap'>
 				<div className='left-content'>
 					<h1>Coding 日志</h1>
-					<p dangerouslySetInnerHTML={{ __html: tips[index] }}></p>
+					<p dangerouslySetInnerHTML={{ __html: tips[tipsIndex] }}></p>
 					<Link to='/posts'>
 						<Button type="primary" size="large" shape="round">开始阅读{' '}<span>🍉</span></Button>
 					</Link>
